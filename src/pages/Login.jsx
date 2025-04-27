@@ -17,7 +17,7 @@ const Login = () => {
       const idToken = await userCredential.user.getIdToken();
       console.log('ID Token:', idToken);
 
-      await fetch('http://localhost:8080/api/auth/login', {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
