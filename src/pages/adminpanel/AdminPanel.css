@@ -1,0 +1,211 @@
+.admin-panel {
+  padding: 1rem;
+  max-width: 48rem;
+  margin: 30px auto;
+  font-weight: 600;
+}
+
+.admin-panel p {
+  padding: 15px;
+  max-width: 48rem;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+.login-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 130px 0;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 24rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.form-field {
+  white-space: pre-wrap;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+textarea.form-field {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.blog-content {
+  white-space: pre-wrap;
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.button {
+  padding: 7px 20px;
+  background-color: #29a329;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 17px;
+}
+
+.button:hover {
+  background-color: #114b11;
+}
+
+.logout-button {
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-title {
+  margin-right: 16px;
+}
+
+.item-actions {
+  gap: 8px;
+}
+
+.item-entry strong {
+  display: inline-block;
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.item-entry .button {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+@media (max-width: 992px) {
+  .admin-panel p {
+    font-size: 26px;
+  }
+
+  .login-panel {
+    margin: 100px 0;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-panel {
+    padding: 0.5rem;
+  }
+
+  .admin-panel p {
+    font-size: 22px;
+  }
+
+  .login-panel {
+    margin: 80px 0;
+  }
+
+  .login-form {
+    padding: 1.5rem;
+  }
+
+  .admin-form {
+    padding: 0.8rem;
+  }
+
+  .form-field, .blog-content {
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 15px;
+  }
+
+  .item-entry strong {
+    font-size: 18px;
+  }
+}
