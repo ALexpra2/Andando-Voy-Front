@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './RouteCard.css';
 
-const RouteCard = ({ route }) => {
+const RouteCard = ({ route, userId, onDelete }) => {
   const [showPopup, setShowPopup] = useState(false);
 
   const handleClick = () => {
@@ -11,6 +11,15 @@ const RouteCard = ({ route }) => {
   const handleClose = () => {
     setShowPopup(false);
   };
+
+  const handleDelete = () => {
+    if (confirm('¿Estás seguro que quieres eliminar esta ruta?')) {
+      onDelete(route._id);
+      setShowPopup(false);
+    }
+  };
+
+  const isOwner = route.user === userId; // 🔥 Comprobar si la ruta es del usuario
 
   return (
     <>
@@ -31,8 +40,15 @@ const RouteCard = ({ route }) => {
           <p><strong>Duración:</strong> {route.duration} horas</p>
           <p><strong>Tipo:</strong> {route.type}</p>
           <p><strong>Notas:</strong> {route.notes || 'Sin notas'}</p>
+
           <button className="close-btn" onClick={handleClose}>Cerrar</button>
-        </div>       
+
+          {isOwner && (
+            <button className="btn-delete" onClick={handleDelete}>
+              Eliminar ruta
+            </button>
+          )}
+        </div>
       )}
     </>
   );

@@ -37,7 +37,7 @@
 }
 
 .stats-image {
-  flex: 1 1 300px;
+  flex: 1 1 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@
 
 .stats-image img {
   max-width: 100%;
-  height: auto;
+  height:200px;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);

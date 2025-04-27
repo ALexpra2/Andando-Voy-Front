@@ -13,7 +13,7 @@ const RouteStats = ({ stats }) => (
     </div>
 
     <div className="stats-image">
-      <img src="/ruta-estadisticas.jpg" alt="Ilustración de rutas" />
+      <img src="../../../public/images/estadisticas.jpg" alt="Ilustración de rutas" />
     </div>
   </div>
 );
