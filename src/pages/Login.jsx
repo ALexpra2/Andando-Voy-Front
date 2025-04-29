@@ -1,7 +1,8 @@
-import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebaseConfig';
-import { useNavigate, Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { auth } from '../firebase';
 
 
 const Login = () => {
@@ -17,12 +18,11 @@ const Login = () => {
       const idToken = await userCredential.user.getIdToken();
       console.log('ID Token:', idToken);
 
-      await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({ idToken }),
-      });
+      await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/auth/login`,
+        { idToken },
+        { withCredentials: true }
+      );
 
       navigate('/dashboard');
     } catch (err) {
